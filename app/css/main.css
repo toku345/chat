@@ -92,10 +92,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/satouhayabusa\/git\/team\/chat\/app\/scss\/_modules\.scss}line{font-family:\0000317}}
 .white-box {
   background: #bbbbbb;
+  height: 600px;
   width: 720px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/satouhayabusa\/git\/team\/chat\/app\/scss\/_modules\.scss}line{font-family:\0000324}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/satouhayabusa\/git\/team\/chat\/app\/scss\/_modules\.scss}line{font-family:\0000325}}
 .box0 {
   background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #999999), color-stop(100%, #00cc00));
   background: -webkit-linear-gradient(#999999, #00cc00);
@@ -106,7 +107,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   float: left;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/satouhayabusa\/git\/team\/chat\/app\/scss\/_modules\.scss}line{font-family:\0000332}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/satouhayabusa\/git\/team\/chat\/app\/scss\/_modules\.scss}line{font-family:\0000333}}
 .box1 {
   background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #999999), color-stop(100%, #ffcc00));
   background: -webkit-linear-gradient(#999999, #ffcc00);
@@ -118,14 +119,20 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 /* border */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/satouhayabusa\/git\/team\/chat\/app\/scss\/_modules\.scss}line{font-family:\0000343}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/satouhayabusa\/git\/team\/chat\/app\/scss\/_modules\.scss}line{font-family:\0000344}}
 .border-gray {
   border-color: gray;
 }
 
 /* chat */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/satouhayabusa\/git\/team\/chat\/app\/scss\/_modules\.scss}line{font-family:\0000349}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/satouhayabusa\/git\/team\/chat\/app\/scss\/_modules\.scss}line{font-family:\0000350}}
 .chat-area {
   width: 100%;
   height: 100%;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/satouhayabusa\/git\/team\/chat\/app\/scss\/_modules\.scss}line{font-family:\0000355}}
+.chat-fields {
+  height: 520px;
+  overflow: scroll;
 }
