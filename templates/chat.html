@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% from "macro/chat_room.html" import chat_room %}
+
+{% block body %}
+  <div class="container" ng-controller="MainCtrl">
+    {{ chat_room() }}
+  </div>
+{% endblock %}
