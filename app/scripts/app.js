@@ -22,8 +22,12 @@ var App = angular.module('app', [
   subjectFactory.get(function(data) {
     var results = data.results,
         organizations = results.company;
-    var subjectList = ["サーバー構築が出来ない", "若手が育たない", "社食が欲しい", "海外展開したい"],
-        i = 0, len = 4;
+    var subjectList = [
+          "サーバー構築が出来ない", "若手が育たない", "社食が欲しい", "海外展開したい",
+          "コスト削減したい", "営業力をあげたい", "人を育てたい", "離職率下げたい",
+          "顧客満足度を上げたい", "経営リスクを下げたい"
+        ],
+        i = 0, len = 10;
 
     for (; i < len; i++) {
       $scope.subjectList.push(new Subject(

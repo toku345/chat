@@ -17,7 +17,7 @@ angular.module('chat', [
     if (text === undefined) return;
 
     $scope.chatFields.push(new ChatField(chatIndex++, text));
-    $scope.inputText = '';
+    $scope.inputText = undefined;
   };
 
   organizationFactory.get(function(data) {
