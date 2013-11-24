@@ -72,7 +72,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/satouhayabusa\/git\/team\/chat\/app\/scss\/_modules\.scss}line{font-family:\000031}}
-.white-box, .box0, .box1 {
+.white-box, .box0, .box1, .profile {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   -ms-border-radius: 5px;
@@ -83,56 +83,87 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 }
 
 /* base */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/satouhayabusa\/git\/team\/chat\/app\/scss\/_modules\.scss}line{font-family:\0000310}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/satouhayabusa\/git\/team\/chat\/app\/scss\/_modules\.scss}line{font-family:\0000315}}
 .container {
-  width: 960px;
+  width: 100%;
 }
 
 /* box */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/satouhayabusa\/git\/team\/chat\/app\/scss\/_modules\.scss}line{font-family:\0000317}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/satouhayabusa\/git\/team\/chat\/app\/scss\/_modules\.scss}line{font-family:\0000322}}
 .white-box {
   background: #eeeeee;
-  height: 600px;
+  position: relative;
+  height: 640px;
   width: 720px;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/satouhayabusa\/git\/team\/chat\/app\/scss\/_modules\.scss}line{font-family:\0000325}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/satouhayabusa\/git\/team\/chat\/app\/scss\/_modules\.scss}line{font-family:\0000331}}
 .box0 {
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #999999), color-stop(100%, #00cc00));
-  background: -webkit-linear-gradient(#999999, #00cc00);
-  background: -moz-linear-gradient(#999999, #00cc00);
-  background: -o-linear-gradient(#999999, #00cc00);
-  background: linear-gradient(#999999, #00cc00);
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffff00), color-stop(100%, #eeee00));
+  background: -webkit-linear-gradient(#ffff00, #eeee00);
+  background: -moz-linear-gradient(#ffff00, #eeee00);
+  background: -o-linear-gradient(#ffff00, #eeee00);
+  background: linear-gradient(#ffff00, #eeee00);
   width: 55%;
   float: left;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/satouhayabusa\/git\/team\/chat\/app\/scss\/_modules\.scss}line{font-family:\0000333}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/satouhayabusa\/git\/team\/chat\/app\/scss\/_modules\.scss}line{font-family:\0000339}}
 .box1 {
-  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #999999), color-stop(100%, #ffcc00));
-  background: -webkit-linear-gradient(#999999, #ffcc00);
-  background: -moz-linear-gradient(#999999, #ffcc00);
-  background: -o-linear-gradient(#999999, #ffcc00);
-  background: linear-gradient(#999999, #ffcc00);
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ff00ff), color-stop(100%, #ee00ee));
+  background: -webkit-linear-gradient(#ff00ff, #ee00ee);
+  background: -moz-linear-gradient(#ff00ff, #ee00ee);
+  background: -o-linear-gradient(#ff00ff, #ee00ee);
+  background: linear-gradient(#ff00ff, #ee00ee);
   width: 55%;
   float: right;
 }
 
 /* border */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/satouhayabusa\/git\/team\/chat\/app\/scss\/_modules\.scss}line{font-family:\0000344}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/satouhayabusa\/git\/team\/chat\/app\/scss\/_modules\.scss}line{font-family:\0000350}}
 .border-gray {
+  width: 96%;
   border-color: gray;
+  position: absolute;
+  bottom: 0px;
 }
 
 /* chat */
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/satouhayabusa\/git\/team\/chat\/app\/scss\/_modules\.scss}line{font-family:\0000350}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/satouhayabusa\/git\/team\/chat\/app\/scss\/_modules\.scss}line{font-family:\0000359}}
 .chat-area {
   width: 100%;
   height: 100%;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/satouhayabusa\/git\/team\/chat\/app\/scss\/_modules\.scss}line{font-family:\0000355}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/satouhayabusa\/git\/team\/chat\/app\/scss\/_modules\.scss}line{font-family:\0000364}}
 .chat-fields {
-  height: 520px;
+  width: 100%;
+  height: 100%;
   overflow: scroll;
+}
+
+/* profile */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/satouhayabusa\/git\/team\/chat\/app\/scss\/_modules\.scss}line{font-family:\0000373}}
+.profile {
+  background: #dddddd;
+  width: 200px;
+  height: 100%;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/satouhayabusa\/git\/team\/chat\/app\/scss\/_modules\.scss}line{font-family:\0000382}}
+.display-box {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-box;
+  display: box;
+  -webkit-box-orient: horizontal;
+  -moz-box-orient: horizontal;
+  -ms-box-orient: horizontal;
+  box-orient: horizontal;
+  height: 520px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/satouhayabusa\/git\/team\/chat\/app\/scss\/main\.scss}line{font-family:\0000310}}
+body {
+  width: 960px;
 }
