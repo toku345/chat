@@ -30,7 +30,7 @@ angular.module('chat', [
       index = Math.floor(Math.random() * context.length);
 
       $scope.chatFields.push(new ChatField(chatIndex++, context[index], 1));
-      $scope.digest();
+      $scope.$digest();
     }, 3000);
   };
 
