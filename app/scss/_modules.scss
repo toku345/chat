@@ -21,14 +21,20 @@
     width: 720px;
 }
 
-.box1 {
+.box0 {
     @extend %base-box;
     @include background(linear-gradient(#999, #0c0));
+
+    width: 55%;
+    float: left;
 }
 
-.box2 {
+.box1 {
     @extend %base-box;
     @include background(linear-gradient(#999, #fc0));
+
+    width: 60%;
+    float: right;
 }
 
 

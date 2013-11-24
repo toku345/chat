@@ -2,7 +2,7 @@
   <div class="white-box" ng-controller="ChatCtrl">
 
     <div ng-repeat="chatField in chatFields">
-      <p class="box1">(( chatField.text ))</p>
+      <p ng-class="'box' + chatField.playerType">(( chatField.text ))</p>
     </div>
 
     <div class="border-gray">
