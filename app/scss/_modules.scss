@@ -1,0 +1,61 @@
+$boardColor: #fff;
+
+%box_base {
+    @include border-radius;
+    padding: 5px;
+}
+
+.no-visible {
+    display: none;
+}
+
+/*------- btn -------*/
+
+.btn {
+    @extend %box_base;
+
+    @include box-shadow(inset 0px 0px 1px #f00);
+    @include background-image(
+        linear-gradient(color-stops(#09f, #09d 50%))
+    );
+
+    display: inline-block;
+    text-decoration: none;
+    border: 1px solid #000;
+    cursor: pointer;
+}
+
+
+/*------- fb board -------*/
+
+.board {
+    @extend %box_base;
+
+    color: white;
+    position: absolute;
+    top: 300px;
+    left: 300px;
+
+    z-index: 1000;
+    background-color: rgba(200, 200, 200, 0.4);
+
+    .name {
+        width: 0%;
+        font-size: 120%;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .status {
+        width: 0%;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+
+    .animation {
+        @include transition-property(width);
+        @include transition-duration(2s);
+
+        width: 100%;
+    }
+}
