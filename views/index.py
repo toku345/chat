@@ -10,7 +10,7 @@ def index():
     return render_template('index.html')
 
 
-@app.route('/chat/<int:chat_id>', methods=['GET'])
+@app.route('/chat/<string:chat_id>', methods=['GET'])
 def chat(chat_id):
     params = dict(
         chat_id=chat_id

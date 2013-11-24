@@ -34,11 +34,14 @@ angular.module('chat', [
     }, 3000);
   };
 
-  organizationFactory.get(function(data) {
-    // TODO
-    var results = data.results,
-        organization = results.company[0];
+  $scope.init = function(id) {
+    organizationFactory.get({id: id}, function(data) {
+      // TODO
+      var results = data.results,
+          organization = results.company[0];
 
-    $scope.organization = organization;
-  });
+      $scope.organization = organization;
+    });
+  };
+
 }]);
