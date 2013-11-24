@@ -1,10 +1,45 @@
-// chat
-.white-box {
+%base-box {
     @include border-radius;
 
-    background: #bbbbbb;
+    padding: 10px;
 }
 
-.orange-box {
-    
+/* base */
+
+.container {
+    width: 960px;
+}
+
+
+/* box */
+
+.white-box {
+    @extend %base-box;
+
+    background: #bbbbbb;
+    width: 720px;
+}
+
+.box1 {
+    @extend %base-box;
+    @include background(linear-gradient(#999, #0c0));
+}
+
+.box2 {
+    @extend %base-box;
+    @include background(linear-gradient(#999, #fc0));
+}
+
+
+/* border */
+
+.border-gray {
+    border-color: gray;
+}
+
+/* chat */
+
+.chat-area {
+    width: 100%;
+    height: 100%;
 }
