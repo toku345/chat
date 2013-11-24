@@ -1,18 +1,17 @@
 {% macro chat_room() %}
-  <div class="white-box">
+  <div class="white-box" ng-controller="ChatCtrl">
 
-    <div>
-      <div class="box1">
-        test
-      </div>
-      <div class="box2">
-        hoge
-      </div>
+    <div chat-speak-area="1"></div>
+
+    <div ng-repeat="chatField in chatFields">
+      <p class="box1">(( chatField.text ))</p>
     </div>
 
     <div class="border-gray">
-      <textarea class="chat-area">
+      <textarea class="chat-area" ng-model="inputText">
       </textarea>
+      <button ng-click="inputTextSubmit();">送信</button>
     </div>
+
   </div>
 {% endmacro %}

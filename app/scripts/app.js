@@ -1,5 +1,6 @@
 var App = angular.module('app', [
-  'ngRoute'
+  'ngRoute',
+  'chat'
 ])
 .config(['$interpolateProvider', function($interpolateProvider) {
   $interpolateProvider.startSymbol('((');
