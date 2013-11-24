@@ -1,0 +1,22 @@
+{
+  "name": "chat",
+  "version": "0.0.0",
+  "authors": [
+    "sugar"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.0.3",
+    "angular": "~1.2.0",
+    "angular-mocks": "~1.2.0",
+    "angular-scenario": "~1.2.0",
+    "angular-route": "~1.2.0"
+  }
+}
