@@ -149,8 +149,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   width: 200px;
   height: 100%;
 }
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/satouhayabusa\/git\/team\/chat\/app\/scss\/_modules\.scss}line{font-family:\0000380}}
+.profile li {
+  margin: 3px 0px;
+  border-bottom: 1px solid black;
+}
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/satouhayabusa\/git\/team\/chat\/app\/scss\/_modules\.scss}line{font-family:\0000382}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/satouhayabusa\/git\/team\/chat\/app\/scss\/_modules\.scss}line{font-family:\0000387}}
 .display-box {
   display: -webkit-box;
   display: -moz-box;
