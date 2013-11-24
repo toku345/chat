@@ -1,8 +1,6 @@
 {% macro chat_room() %}
   <div class="white-box" ng-controller="ChatCtrl">
 
-    <div chat-speak-area="1"></div>
-
     <div ng-repeat="chatField in chatFields">
       <p class="box1">(( chatField.text ))</p>
     </div>

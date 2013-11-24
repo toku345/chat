@@ -1,9 +1,11 @@
 angular.module('chat', [
+  'resources.chat'
 ])
-.controller('ChatCtrl', ['$scope', function($scope) {
-  var ChatField = function(index, text) {
+.controller('ChatCtrl', ['$scope', 'chatFactory', function($scope, chatFactory) {
+  var ChatField = function(index, text, playerType) {
     this.index = index;
     this.text = text;
+    this.playerType = playerType || 0;
   };
 
   var chatIndex = 0;
