@@ -1,6 +1,10 @@
 {% extends 'base.html' %}
 
 {% block body %}
+  <header class="header">
+    <span>Sugar-Free</span>
+  </header><!-- /header -->
+
   <div class="container" ng-controller="SubjectCtrl">
     <table class="table table-striped">
       <tr ng-repeat="subject in subjectList">

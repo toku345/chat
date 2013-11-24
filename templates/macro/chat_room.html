@@ -2,11 +2,9 @@
   <div class="white-box" ng-controller="ChatCtrl">
 
     <div class="display-box under-line">
-      <ul class="profile" ng-show="organization">
-        <li>(( organization.name ))</li>
-        <li>(( organization.office ))</li>
-        <li>(( organization.desc ))</li>
-        <li>(( organization.capital ))</li>
+
+      <ul class="profile">
+        test
       </ul>
 
       <div class="chat-fields">
@@ -15,15 +13,19 @@
         </div>
       </div>
 
-      <div class="profile">
-        test
-      </div>
+      <ul class="profile" ng-show="organization">
+        <li>(( organization.name ))</li>
+        <li>(( organization.office ))</li>
+        <li>(( organization.desc ))</li>
+        <li>(( organization.capital ))</li>
+      </ul>
+
     </div>
 
     <div class="border-gray">
       <textarea class="chat-area" ng-model="inputText">
       </textarea>
-      <button ng-click="inputTextSubmit();">送信</button>
+      <button ng-click="inputTextSubmit();" class="btn btn-primary">送信</button>
     </div>
 
   </div>
