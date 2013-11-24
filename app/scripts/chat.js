@@ -24,7 +24,6 @@ angular.module('chat', [
     // TODO
     var results = data.results,
         organization = results.company[0];
-    console.log(organization);
     $scope.organization = organization;
   });
 }]);

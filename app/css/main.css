@@ -147,15 +147,14 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 .profile {
   background: #dddddd;
   width: 200px;
-  height: 100%;
 }
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/satouhayabusa\/git\/team\/chat\/app\/scss\/_modules\.scss}line{font-family:\0000380}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/satouhayabusa\/git\/team\/chat\/app\/scss\/_modules\.scss}line{font-family:\0000379}}
 .profile li {
   margin: 3px 0px;
   border-bottom: 1px solid black;
 }
 
-@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/satouhayabusa\/git\/team\/chat\/app\/scss\/_modules\.scss}line{font-family:\0000387}}
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/satouhayabusa\/git\/team\/chat\/app\/scss\/_modules\.scss}line{font-family:\0000386}}
 .display-box {
   display: -webkit-box;
   display: -moz-box;
@@ -165,7 +164,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   -moz-box-orient: horizontal;
   -ms-box-orient: horizontal;
   box-orient: horizontal;
-  height: 520px;
+  height: 560px;
+}
+
+/* line */
+@media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/satouhayabusa\/git\/team\/chat\/app\/scss\/_modules\.scss}line{font-family:\0000395}}
+.under-line {
+  border-bottom: 1px dotted black;
 }
 
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/satouhayabusa\/git\/team\/chat\/app\/scss\/main\.scss}line{font-family:\0000310}}

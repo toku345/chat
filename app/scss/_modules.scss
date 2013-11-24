@@ -75,7 +75,6 @@
 
     background: #dddddd;
     width: 200px;
-    height: 100%;
 
     li {
         margin: 3px 0px;
@@ -88,5 +87,11 @@
     @include display-box;
     @include box-orient(horizontal);
 
-    height: 520px;
+    height: 560px;
+}
+
+/* line */
+
+.under-line {
+    border-bottom: 1px dotted black;
 }
