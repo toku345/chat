@@ -91,7 +91,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 /* box */
 @media -sass-debug-info{filename{font-family:file\:\/\/\/Users\/satouhayabusa\/git\/team\/chat\/app\/scss\/_modules\.scss}line{font-family:\0000317}}
 .white-box {
-  background: #bbbbbb;
+  background: #eeeeee;
   height: 600px;
   width: 720px;
 }
@@ -114,7 +114,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   background: -moz-linear-gradient(#999999, #ffcc00);
   background: -o-linear-gradient(#999999, #ffcc00);
   background: linear-gradient(#999999, #ffcc00);
-  width: 60%;
+  width: 55%;
   float: right;
 }
 

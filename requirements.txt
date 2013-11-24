@@ -3,3 +3,4 @@ Flask-Script
 Jinja2
 MarkupSafe
 Werkzeug
+mongoengine

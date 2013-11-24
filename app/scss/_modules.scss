@@ -17,7 +17,7 @@
 .white-box {
     @extend %base-box;
 
-    background: #bbbbbb;
+    background: #eeeeee;
     height: 600px;
     width: 720px;
 }
@@ -34,7 +34,7 @@
     @extend %base-box;
     @include background(linear-gradient(#999, #fc0));
 
-    width: 60%;
+    width: 55%;
     float: right;
 }
 
