@@ -57,6 +57,20 @@ angular.module('chat', [
 
     $scope.chatFields.push(new ChatField(chatIndex++, text));
     $scope.inputText = undefined;
+
+    setTimeout(function() {
+      var context = [
+        "「『無理』というのはですね、嘘吐きの言葉なんです。途中で止めてしまうから無理になるんですよ」",
+        "僕の夢の設定というのはいつも決まっているんです。これ以上やったら鼻血が出て倒れるという所のもうちょっと上なんです。",
+        "この間も7千人の社員と、ワタミが29周年のイベントで、みんなで涙を流しながら「よかったね」と言っている会社のどこがブラックだと僕は思うわけです。",
+        "神様は不公平ではない。金持ち貧乏、頭が良い悪い、性格が良い悪い、足が長い短い、そんなことは人間の価値基準ではないのだ。そんなことを神様は何とも思っていない。",
+        "「円高で工場が大変なら、2割位のサービス残業をしなさいよ！」",
+      ],
+      index = Math.floor(Math.random() * context.length);
+
+      $scope.chatFields.push(new ChatField(chatIndex++, context[index], 1));
+      $scope.digest();
+    }, 3000);
   };
 
   organizationFactory.get(function(data) {

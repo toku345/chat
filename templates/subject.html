@@ -1,11 +1,11 @@
 {% extends 'base.html' %}
 
 {% block body %}
-  <header class="header">
-    <span>Sugar-Free</span>
-  </header><!-- /header -->
-
   <div class="container" ng-controller="SubjectCtrl">
+    <header class="header">
+      <span>Sugar-Free</span>
+    </header><!-- /header -->
+
     <table class="table table-striped">
       <tr ng-repeat="subject in subjectList">
         <td><a href="/chat/(( subject.id ))">(( subject.text ))</a></td>
