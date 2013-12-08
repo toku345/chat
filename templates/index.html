@@ -1,10 +1,39 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Document</title>
-</head>
-<body>
-  test
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+  </head>
+  <body>
+    {% if flash.error %}
+    <hr>
+    <b>{{ flash.error }}</b>
+    <hr>
+    {% endif %}
+
+    {% if user %}
+      <form method="post">
+        <input name="_method" type="hidden" value="DELETE"/>
+        <p>{{ user.name }}さん、こんにちは！
+          <a href="javascript:" onClick='forms[0].submit()'>ログアウト</a>
+        </p>
+      </form>
+    {% else %}
+      <p>ログインしてください</p>
+      <form method="post">
+        <fieldset>
+          <legend>ログイン</legend>
+          <p>
+            <label for="user[name]">ユーザ名：</label>
+            <input type="text" name="user[name]" />
+          </p>
+          <p>
+            <label for="user[pwd]">パスワード：</label>
+            <input type="password" name="user[pwd]" />
+          </p>
+          <input type="submit">
+        </fieldset>
+      </form>
+    {% endif %}
+  </body>
 </html>

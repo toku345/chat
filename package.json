@@ -45,7 +45,9 @@
 
     "express": "latest",
     "swig": "latest",
-    "mongoose": "latest"
+    "mongoose": "latest",
+
+    "connect-flash": "*"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
