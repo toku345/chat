@@ -49,14 +49,7 @@ function createApp() {
   return app;
 };
 
-app.get('/', function(req, res) {
-  var User = require('./models/user'),
-    user = new User({name: 'test'});
-  user.save();
-  res.render('index', {});
-});
-
-// app.get('/', routes.index);
+app.get('/', routes.index);
 app.post('/', routes.index);
 app.del('/', routes.index);
 app.get('/:page', routes.index);
