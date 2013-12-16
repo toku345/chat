@@ -6,9 +6,10 @@
 var express = require('express'),
   path = require('path'),
   http = require('http'),
+  routes = require('./routes'),
   app = createApp(),
   server = http.createServer(app),
-  routes = require('./routes');
+  io = require('socket.io').listen(server);
 
 
 function createApp() {
@@ -53,7 +54,47 @@ app.get('/', routes.index);
 app.post('/', routes.index);
 app.del('/', routes.index);
 app.get('/:page', routes.index);
+// app.get('/:name', routes.index);
 
 server.listen(app.get('port'), function() {
   console.log('Express server listening on port ' + app.get('port'));
+});
+
+// simple chat implementation
+var chat = io.sockets.on('connection', function(socket) {
+  socket.emit('connected');
+
+  socket.on('init', function(req) {
+    socket.set('room', req.room);
+    socket.set('name', req.name);
+    chat.to(req.room).emit('message', req.name + ' さんが入室');
+
+    socket.join(req.room);
+  });
+
+  socket.on('message', function(data) {
+    var room, name;
+
+    socket.get('room', function(err, _room) {
+      room = _room;
+    });
+    socket.get('name', function(err, _name) {
+      name = _name;
+    });
+
+    chat.to(room).emit('message', name + ": " + data);
+  });
+
+  socket.on('disconnect', function() {
+    var room, name;
+
+    socket.get('room', function(err, _room) {
+      room = _room;
+    });
+    socket.get('name', function(err, _name) {
+      name = _name;
+    });
+    socket.leave(room);
+    chat.to(room).emit('message', name + ' さんが退出');
+  });
 });
