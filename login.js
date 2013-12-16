@@ -1,5 +1,7 @@
 // テスト用データ
-var users = { 'suger': 'free' };
+var users = { 'sugar':  'free',
+              'guest1': 'guest1',
+              'guest2': 'guest2'};
 
 module.exports = function(req, res, next) {
   var method = req.method.toLowerCase(); // メソッド名をキャッシュしておく

@@ -1,14 +1,17 @@
 
 var socket = io.connect('/');
 
-function chat(room) {
+function chat(room, name) {
   socket.on('connected', function() {
-    socket.json.emit('init', { 'room': room });
+    socket.json.emit('init', { room: room, name: name });
   });
 
   socket.on('message', function(data) {
-    if (data.comment) {
-      update(data.comment);
+    // if (data.commen) {
+    //   update(data.comment);
+    // }
+    if (data) {
+      update(data);
     }
   });
 }
@@ -16,7 +19,8 @@ function chat(room) {
 function send(room, name) {
   var data = $('#comment').val();
 
-  socket.json.send({ 'room': room, 'data': name + ": " + data });
+  // socket.json.send({ 'room': room, 'data': name + ": " + data });
+  socket.emit('message_to', data);
   update(name + ": " + data);
 
   $('#comment').val("");

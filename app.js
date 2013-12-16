@@ -53,8 +53,7 @@ function createApp() {
 app.get('/', routes.index);
 app.post('/', routes.index);
 app.del('/', routes.index);
-app.get('/:page', routes.index);
-// app.get('/:name', routes.index);
+app.get('/:room_id', routes.index);
 
 server.listen(app.get('port'), function() {
   console.log('Express server listening on port ' + app.get('port'));
@@ -72,7 +71,7 @@ var chat = io.sockets.on('connection', function(socket) {
     socket.join(req.room);
   });
 
-  socket.on('message', function(data) {
+  socket.on('message_to', function(data) {
     var room, name;
 
     socket.get('room', function(err, _room) {
