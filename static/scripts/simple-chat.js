@@ -1,6 +1,8 @@
 
 var socket = io.connect('/');
 
+console.dir(socket);
+
 function chat(room, name) {
   socket.on('connected', function() {
     socket.json.emit('init', { room: room, name: name });
@@ -21,7 +23,8 @@ function send(room, name) {
 
   // socket.json.send({ 'room': room, 'data': name + ": " + data });
   socket.emit('message_to', data);
-  update(name + ": " + data);
+  // socket.broadcast.to(room).emit('message_to', data);
+  // update(name + ": " + data);
 
   $('#comment').val("");
   $('#comment').focus();
