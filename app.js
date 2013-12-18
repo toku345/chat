@@ -17,7 +17,7 @@ function createApp() {
     swig = require('swig'),
     flash = require('connect-flash');
 
-  app.set('port', process.env.PORT || 3000);
+  app.set('port', process.env.PORT || 80);
   app.engine('html', swig.renderFile);
   app.set('view engine', 'html');
   app.set('views', path.join(__dirname, 'templates'));
