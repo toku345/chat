@@ -47,7 +47,8 @@
     "swig": "latest",
     "mongoose": "latest",
 
-    "connect-flash": "*"
+    "connect-flash": "*",
+    "socket.io": "*"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
