@@ -50,10 +50,13 @@ function createApp() {
   return app;
 };
 
+// routing
 app.get('/', routes.index);
 app.post('/', routes.index);
 app.del('/', routes.index);
-app.get('/:room_id', routes.index);
+// app.get('/:page', routes.index);
+// app.get('/top', routes.index);
+// app.get('/chat/:room_id', routes.chat);
 
 server.listen(app.get('port'), function() {
   console.log('Express server listening on port ' + app.get('port'));

@@ -6,6 +6,11 @@
 exports.index = function(req, res) {
   var User = require('../models/user'),
       user = new User({name: 'test'});
+
+  res.render('index', {});
+};
+
+exports.chat = function(req, res) {
   var name = "",
       room = "defualt";
 
@@ -20,5 +25,5 @@ exports.index = function(req, res) {
   console.dir("name: " + name);
   console.dir("room: " + room);
 
-  res.render('index', { name: name, room: room });
+  res.render('chat', { name: name, room: room });
 };
