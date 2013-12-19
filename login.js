@@ -21,6 +21,8 @@ module.exports = function(req, res, next) {
   }
   if (logout) {
     delete req.session.user;
+    // req.url = '/';
+    res.redirect('/');
   }
   if (login) {
     validate(user, function(err) {

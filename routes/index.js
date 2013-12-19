@@ -14,7 +14,6 @@ exports.chat = function(req, res) {
   var name = "",
       room = "defualt";
 
-  user.save();
   if (req.session.user) {
     name = req.session.user.name;
   }
