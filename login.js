@@ -1,4 +1,5 @@
 // テスト用データ
+var User = require('./models/user');
 var users = { 'sugar':  'free',
               'guest1': 'guest1',
               'guest2': 'guest2'};
@@ -21,15 +22,15 @@ module.exports = function(req, res, next) {
   }
   if (logout) {
     delete req.session.user;
-    // req.url = '/';
     res.redirect('/');
   }
   if (login) {
     validate(user, function(err) {
+      // console.log("in validete() - err: " + err);
       if (!err) {
         req.session.user = {
-          name: user.name,
-          pwd:  user.pwd
+          name: user.name
+          // pwd:  user.pwd
         };
       }else {
         req.flash('error', err.msg);
@@ -44,8 +45,15 @@ module.exports = function(req, res, next) {
 };
 
 function validate(user, cb) {
-  var valid = Object.keys(users).some(function(name) {
-    return (user.name === name && user.pwd === users[name]);
+  User.findOne({ name: user.name, password: user.pwd }, function(err, user) {
+    var valid = false;
+    if (err) { /* TODO handle err */ }
+    if (user) {
+      console.log("user: " + user);
+      valid = true;
+    }else {
+      // console.log("no user!");
+    }
+    cb((!valid && { msg: 'ログイン情報に誤りがあります。' }));
   });
-  cb((!valid && { msg: 'ログイン情報に誤りがあります。' }));
 }

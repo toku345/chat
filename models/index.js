@@ -1,10 +1,13 @@
 // TODO: create config file
-var db = require('mongoose'),
-  dbName = 'chat';
+var mongoose = require('mongoose');
+var dbName = 'chat';
 
-db.connect('mongodb://localhost/' + dbName);
+var db = mongoose.connect('mongodb://localhost:27017/' + dbName);
 db.connection.on('connected', function() {
   console.log('MongoDB connected');
+  // if () {
+    // console.dir(db.users.find());
+  // }
 });
 
 

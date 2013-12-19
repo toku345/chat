@@ -9,7 +9,8 @@ var express = require('express'),
   routes = require('./routes'),
   app = createApp(),
   server = http.createServer(app),
-  io = require('socket.io').listen(server);
+  io = require('socket.io').listen(server),
+  User = require('./models/user');
 
 
 function createApp() {

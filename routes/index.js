@@ -4,8 +4,8 @@
  */
 
 exports.index = function(req, res) {
-  var User = require('../models/user'),
-      user = new User({name: 'test'});
+  // var User = require('../models/user'),
+  //     user = new User({name: 'test'});
 
   res.render('index', {});
 };
