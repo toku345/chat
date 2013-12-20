@@ -21,19 +21,17 @@ function chat(room, name) {
 function send(room, name) {
   var data = $('#comment').val();
 
-  // socket.json.send({ 'room': room, 'data': name + ": " + data });
   socket.emit('message_to', data);
-  // socket.broadcast.to(room).emit('message_to', data);
-  // update(name + ": " + data);
 
   $('#comment').val("");
   $('#comment').focus();
 }
 
 function update(data) {
-  var obj = $(document.createElement('div'));
-  obj.html(data);
-  $('#view').append(obj);
+  var obj = $(document.createElement('li'));
+  obj.addClass("message");
+  obj.text(data);
+  $('#messages').append(obj);
 }
 
 // for AngularJS

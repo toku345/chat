@@ -25,4 +25,6 @@ exports.chat = function(req, res) {
   console.dir("room: " + room);
 
   res.render('chat', { name: name, room: room });
+  // res.render('jobseed_chat', { name: name, room: room });
+
 };
