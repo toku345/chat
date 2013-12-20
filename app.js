@@ -18,6 +18,8 @@ function createApp() {
     swig = require('swig'),
     flash = require('connect-flash');
 
+  swig.setDefaults({ varControls: ['<%=', '%>']});
+
   app.set('port', process.env.PORT || 80);
   app.engine('html', swig.renderFile);
   app.set('view engine', 'html');

@@ -35,3 +35,8 @@ function update(data) {
   obj.html(data);
   $('#view').append(obj);
 }
+
+// for AngularJS
+function ChatCtrl($scope) {
+  $scope.hoge = "this is a hoge messeage!";
+};
