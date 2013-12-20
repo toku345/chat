@@ -5,9 +5,6 @@ var dbName = 'chat';
 var db = mongoose.connect('mongodb://localhost:27017/' + dbName);
 db.connection.on('connected', function() {
   console.log('MongoDB connected');
-  // if () {
-    // console.dir(db.users.find());
-  // }
 });
 
 
